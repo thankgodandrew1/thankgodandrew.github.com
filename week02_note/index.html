@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="ThankGod Andrew" >
+    <meta name="description"
+    content="Week 1 Reading Note WDD330: Web Frontend Development at Brigham Young University - Idaho" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" >
+  <link rel="stylesheet" href="../week01_note/styles/small.css">
+  <link rel="stylesheet" href="../week01_note/styles/meduim.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap">
+    <title>Reading Notes 📘</title>
+</head>
+<body>
+    <h1>Preparation: Reading Note</h1>
+    <hr>
+    <h2>Class Basic Syntax</h2>
+    <div>
+    <p>what is a class? in OOP, a class is an extensible program-code-template for creating objects, providing initial values for state
+       (member variables) and implementations of behavior (member functions or methods). The <span class="highlight">class</span> statement initiates a JavaScript class. Properties and methods are assigned in the <span class="highlight">constructor()</span> method. The constructor() method is called each time a class object is initialized, the basic class syntax is in this format: </p>
+    <div class="code">
+       <code>
+            <span class="keyword">class </span><span class="major-color">MyClass</span><span class="marks-color">{</span><br><span class="indent">property <span class="keyword">=</span> value;</span><span class="js-comment"> // property</span><br><br><span class="major-color indent">constructor<span class="marks-color">(<span class="periods">...</span>) {<span class="js-comment"> // constructor <br><span class="indented">// ...</span></span><br> <span class="indent">}</span></span>
+            <br><span class="major-color indent">method<span class="marks-color">(<span class="periods">...</span>) {}</span> <span  class="js-comment"> // method</span><br><br><span class="keyword indent">get</span><span class="major-color"> method<span class="marks-color">(<span class="periods">...</span>) {}</span><span  class="js-comment"> // getter method</span>
+            <br><span class="keyword indent">set</span> <span class="major-color">method<span class="marks-color">(<span class="periods">...</span>) {}</span><span  class="js-comment"> // setter method</span><br><span class="periods indent">...</span><br><br><span class="marks-color indent">[Symbol.iterator]() {} <span  class="js-comment"> // method with computed name (symbol here) <br> <span class="indent">// ...</span></span></span><span class="marks-color">}</span>
+        </code>
+    </div>
+         <p>In the above  code it's cool to know that MyClass is also a function, you could get the proof of that if you declare a class and check for the type using the<span class="highlight"> typeof</span> operator keyword. The above code is a clear representation of how a basic class syntax should look like, methods, getters and setters are found or written to <span class="highlight">MyClass.prototype.</span></p>
+    </div>
+    <h2>Object methods, "this"</h2>
+    <div>
+        <p>Based on the reading it's common that an object method needs to access the information stored in the object to do it's job. This is were one of the benefits of <span class="highlight">this</span> arises. with the "this" keyword a method can access an object with it's properties. In an example format the value of "this" is the object before the dot, it is the one used to call the method.</p>
+        <div class="code">
+            <code><span class="keyword">let</span> <span class="major-color">person</span> <span class="js-comment">=</span> <span class="marks-color">{</span>
+                <br><span class="indent marks-color">name<span class="keyword">:</span> <span class="yellow">"Samuel"</span></span><br>
+                <span class="indent marks-color">age<span class="keyword">:</span><span class="js-comment"> 19</span></span><br><span class="marks-color">}</span>
+            </code>
+        </div>
+        <p>Based on the explanation above the "this" keyword can be used in an object method to access the person object properties. How is this done, it is done using the "this" keyword, <span class="highlight">this.name</span> accesses the name property which is "Samuel" the value of this will be the person object. this can also be used in any function, even if it's not a method of an object.</p>
+    </div>
+    <h2>Export and Import</h2>
+    <div>
+        <p>Export and import directives have several syntax variants. Based on further personal study i discovered that through the help of ES6, we can create modules in JavaScript. In a module, there can be classes, objects, functions, and so on. To make all these available in another
+            file we use or can use <span class="highlight">export</span> and <span class="highlight">import</span> these keywords are used for exporting and importing one or more member in a module. There are different syntax we can use to both export, and import.</p>
+    </div>
+    <h1 class="header">Readings source: <a href="https://javascript.info/class">javascript.info...</a> <a href="https://www.w3schools.com/jsref/jsref_class.asp">w3schools...</a> <a href="https://www.geeksforgeeks.org/es6-import-and-export/#:~:text=With%20the%20help%20of%20ES6,more%20members%20in%20a%20module.">geeksforgeeks...</a></h1>
+</body>
+</html>

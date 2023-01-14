@@ -4,6 +4,8 @@ body{
     padding: 20px;
     box-sizing: border-box;
     line-height: 1.5;
+    background-color: #3b3b3b;
+    color: white;
 }
 ul li{
     list-style: decimal;
@@ -23,7 +25,7 @@ span{
     font-weight: bolder;
 }
 div{
-    background-color: rgb(255, 165, 0, .2); 
+    background-color: #3b3b3b; 
     padding: 1px 20px;
     margin: 0 .2em;
     box-shadow: 0px 0px 5px;
@@ -36,4 +38,58 @@ h1{
 h2{
     font-size: 1.6rem;
     margin: 25px 0 8px .7em;
+}
+ /* For Week 2 Major Styling */
+
+ .keyword, .periods{
+    color: red;
+ }
+ .major-color{
+    color: blue;
+ }
+ .indent{
+    margin-left: 20px;
+ }
+ .indented{
+    margin-left: 40px;
+ }
+ .js-comment{
+    color: brown;
+ }
+.marks-color{
+    color: white;
+}
+.code{
+    background-color: #282a36;
+    margin: 2em 0;
+    padding: 20px;
+    font-weight: 100;
+    /* font-size: 17px; */
+    font-family: "Ubuntu";
+    
+}
+.highlight{
+    color: lightblue;
+    text-decoration: solid;
+    background-color: #555353;
+    padding: 2px;
+    border-radius: 5px;
+}
+.yellow{
+    color: yellow;
+}
+.header{
+
+}
+.header a{
+    color: #282a36;
+    text-decoration: none;
+    margin: 1em;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to left, rgb(255, 165, 0, .2), rgb(255, 165, 0, .6), rgb(255, 165, 0, .5), rgb(255, 165, 0, .2));
+}
+.header a:hover{
+   background-color: #555353;
+
 }
