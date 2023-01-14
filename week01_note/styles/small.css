@@ -79,13 +79,17 @@ h2{
     color: yellow;
 }
 .header{
-
+    background: linear-gradient(to left, rgb(255, 165, 0, .2), rgb(255, 165, 0, .6), rgb(255, 165, 0, .5), rgb(255, 165, 0, .2));
+    display: block;
 }
 .header a{
     color: #282a36;
     text-decoration: none;
-    margin: 1em;
-    width: 100%;
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: block; */
     padding: 20px;
     background: linear-gradient(to left, rgb(255, 165, 0, .2), rgb(255, 165, 0, .6), rgb(255, 165, 0, .5), rgb(255, 165, 0, .2));
 }
