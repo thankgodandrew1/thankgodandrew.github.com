@@ -4,8 +4,13 @@ body{
     padding: 20px;
     box-sizing: border-box;
     line-height: 1.5;
-    background-color: #3b3b3b;
     color: white;
+}
+.w02-body{
+    background-color: #3b3b3b;
+}
+.week1-header{
+    color: black;
 }
 ul li{
     list-style: decimal;
@@ -23,6 +28,10 @@ hr{
 }
 span{
     font-weight: bolder;
+}
+.week1-div{
+    background-color: rgb(255, 165, 0, .4);
+    color: black;
 }
 div{
     background-color: #3b3b3b; 
@@ -89,11 +98,42 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: block; */
     padding: 20px;
     background: linear-gradient(to left, rgb(255, 165, 0, .2), rgb(255, 165, 0, .6), rgb(255, 165, 0, .5), rgb(255, 165, 0, .2));
 }
 .header a:hover{
    background-color: #555353;
 
+}
+/* Styling for Week 03 Note */
+.week3-div{
+    background-color: rgb(114, 156, 121,.3);
+    color: black;
+}
+#week3-div{
+    background-color: rgb(114, 156, 121, .5);
+    color: black;
+}
+.week3-header{
+    color: black;
+}
+.week3-h1{
+    color: black;
+    background: rgb(114, 156, 121, .5);
+}
+.circle{
+   list-style: circle;   
+}
+.week3-font-fam{
+    font-family: "Lato";
+}
+.week3-font-fam a{
+    text-decoration: none;
+    color: red;
+}
+.week3-h3{
+    font-family: "Ubuntu";
+    color: black;
+    text-align: center;
+    padding: 7px;
 }

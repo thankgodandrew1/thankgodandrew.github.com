@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="ThankGod Andrew" >
+    <meta name="description"
+    content="Week 1 Reading Note WDD330: Web Frontend Development at Brigham Young University - Idaho" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" >
+  <link rel="stylesheet" href="../week01_note/styles/small.css">
+  <link rel="stylesheet" href="../week01_note/styles/meduim.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap">
+    <title>Reading Notes 📘</title>
+</head>
+<body>
+    <h1 class="week3-h1">Preparation: Reading Note</h1>
+    <hr>
+    <h2 class="week3-header">Mobile UX Design</h2>
+    <div class="week3-div">
+    <p>UX which is explicitly know as user experience is a primary aspect of web development, it refers to the positive experiences web 
+        clients/users experience during the use of mobile devices. Mobile UX design focuses strongly on: </p>
+    <ul class="week3-font-fam">
+        <li class="circle">Learnability: How easily first-time users complete basic tasks.  </li>
+        <li class="circle">Efficiency: How quickly users perform basic tasks once they've learned the design.</li>
+        <li class="circle">Memorability: The ability of users to remember how to use the system.</li>
+        <li class="circle">Errors: The amount and severity of errors users make and how easily they can correct them.</li>
+        <li class="circle">Satisfaction: How pleasant the experience of using the design was.</li>
+    </ul>
+    <p>The reading on mobile user experience (UX) presents 10 tried and tested UX design principles, which are as follows:</p>
+     <ul class="week3-font-fam">
+        <li><b>Content Visualization: </b> applying this principle requires the designer to identify and select only the content that is most valuable to display, and eliminate contents that is not of the highest importance.</li>
+        <li><b>Intuitive Navigation: </b> the application of this principle result to easy navigation of your website, users find it easy to search for anything they are looking for, and also they also know were to go to if they can't find what they are looking for.</li>
+        <li><b>Touchscreen Target Sizes: </b>another important principle to consider is target sizes, a good consideration of the size and space of an action button is important.</li>
+        <li><b>Provide User Control: </b>user control is giving your users the control to do what they want or the option to undo something. For example, if a user deletes something by mistake and you give an 'undo' option, you're giving the user control and that in the long run gives he user a great satisfaction.</li>
+        <li><b>Legible Text Content: </b>providing readability to users is a key design principles, some things to consider to improve legibility are: spacing, layout, and font size</li>
+        <li><b>Clear Interface Element: </b>this principles requires designers to have sufficient contrast between content and background, one good tool designers csn use to check for accessibility issue is <a href="http://wave.webaim.org/">webaim.org</a></li>
+        <li><b>Hand Position Controls: </b>Hand positions should be kept in mind when placing controls on a mobile design. Research findings on how people hold and interact with their mobile phones found that 49% of people rely on one thumb. This statistic is useful to keep in mind when designing to accommodate for the thumb's reach zone.</li>
+        <li><b>Minimize Data Input: </b>minimizing the need to enter data in your designs is vital it also provides a good user experience.</li>
+        <li><b>Create a Seamless Experience: </b>considering this aspect of design provides an experience that is devoid of any mistakes, delays, or setbacks as users journey through your product.</li>
+        <li><b>Test Your Design: </b>On the reading it states "The key to any successful product is to continuously test and optimize." This would help designers detect any problem on the product.</li>
+     </ul>     
+     <p>The application of these principles would result to a good mobile user experience (UX)</p>
+</div>
+    <h2 class="week3-header">Web APIs</h2>
+    <div id="week3-div">
+        <p>API in it's full form is <b>Apllication Programming Interface,</b> APIs are built and made available in programming languages to allow developers to create complex functionality more easily. APIs removes complex codes away from developers, it provides some easier syntax to use in it's place. <br> <br> 
+        There are two categories of APIs in client-side Javascript. <b>Browser APIs</b> and <b>Third-party APIs.</b> The Browser API are built into a web browser, they are able to expose data from the browser and surrounding computer environment, infact, talking of a great importance a Browser API can extend the functionality of a web browser. While a 
+        Third-party API are APIs provided by third parties (NOT the browser) example, Twitter, Google, Facebook, e.t.c to allow developers to access their functionality via JavaScript and use it on their site</p>
+        <h3 class="week3-h3">How do APIs work? --- They are based on objects. They have recognizable entry points. They often use events to handle changes in state and. They have additional security mechanisms where appropriate</h3>
+    </div>
+    <h2 class="week3-header">setTimeout and setInterval</h2>
+    <div class="week3-div">
+        <p>As programmers we may decide to execute a function not immediately, but at a later time. That's called "scheduling a call." <br><br> There two methods for it:</p>
+        <ul class="week3-font-fam">
+            <li class="circle"><em>setTimeout</em> allows us to run a function once after the interval of time.</li>
+            <li class="circle"><em>setInterval </em> allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.</li>
+        </ul>  
+        <p>The synatax for the setTimeout and setInterval appears to be the same.</p>
+         <ul class="week3-font-fam">
+            <li class="circle">Methods <b><em>setTimeout(func, delay, ...args)</em></b> and <b><em>setInterval(func, delay, ...args)</em></b> allow us to run the func once or regularly after <b><em>delay</em></b> milliseconds.</li>
+            <li class="circle">To cancel the execution, we should call <b><em>clearTimeout/clearInterval</em></b> with the value returned by <b><em>setTimeout/setInterval.</em></b></li>
+         </ul> 
+         <p>Nested setTimeout are good and it's a more flexible alternative to <b><em>setInterval</em></b>, allowing uss to set the time between executions to be more precise. Zero delay scheduling with <b><em>setTimeout(func, 0)</em></b> is used to schedule the call "as soon as possible, but right after the current script is complete.</p>
+    </div>
+    <h3 class="week3-h3"><b><em>Question 1:</em></b> Can we use await in setTimeout? <br> <b><em>Question 2:</em></b> What can i say are the limitations of APIs?</h3>
+</body>
+</html>
