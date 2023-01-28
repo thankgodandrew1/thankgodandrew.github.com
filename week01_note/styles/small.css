@@ -137,3 +137,12 @@ h2{
     text-align: center;
     padding: 7px;
 }
+.week4-ul{
+    background-color: rgb(114, 156, 121, .2);
+    width: fit-content;
+    padding: 10px 30px;
+    box-shadow: 0px 0px 5px ;
+}
+img{
+    width: 100%;
+}

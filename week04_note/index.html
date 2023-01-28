@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="Author" content="ThankGod Andrew" >
+    <meta
+      name="description"
+      content="Week 1 Reading Note WDD330: Web Frontend Development at Brigham Young University - Idaho"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    >
+    <link rel="stylesheet" href="../week01_note/styles/small.css" >
+    <link rel="stylesheet" href="../week01_note/styles/meduim.css" >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap"
+    >
+    <title>Reading Notes 📘</title>
+  </head>
+  <body>
+    <h1 class="week3-h1">Preparation: Reading Note</h1>
+    <hr>
+    <h2 class="week3-header">Debugging in the Browser</h2>
+    <div class="week3-div">
+      <p>
+        This concept introduces a tool developers can use to debug their
+        scripts. Firstly, <em>Debugging</em> is the process of finding and
+        fixing errors within a script, this script debugging tool are widely
+        supported by modern browsers, thers's a special UI in developer tools
+        that makes debugging much easier. This tool is found in the
+        <em>Sources</em> panel. In the reading we were introduced to a
+        <em>"Breakpoint"</em> A <em>breakpoint</em> is a point of code where the
+        debugger will automatically pause the JavaScriot execution, at that
+        point we can examine current variables, in general we can debug it.
+        <br><br>
+        There are also conditional breakpoints, and it is useful when we need to
+        stop only for a certain function parameters. We can also pause a code in
+        the developers tool using the <em>debuggger</em> command. The debugger
+        command only works when the dev tool is open. Other important things to
+        know is the environments we will use to examiine our codes, they
+        includes:
+      </p>
+      <ul class="week4-ul">
+        <li class="circle"><b>Watch</b>
+            - this shows the current values for any expression.</li>
+        
+        <li class="circle"> <b>Call Stack</b>
+            - this shows the nested call chain and</li>
+        
+        <li class="circle"><b>Scope</b>
+            - this shows the current variables.</li>
+      </ul>
+      <br>
+      <p>
+        There also some other key symbols or hotkey we can use to trace
+        executions in our codes, ranging from:
+      </p>
+      <ul class="week4-ul">
+        <li class="circle">"Resume"
+            >: continues the execution, hotkey F8.</li>
+        
+        <li class="circle">"Step into":>
+            hotkey F11.</li>
+        
+        <li class="circle"><em>"Step out":</em>
+            >continue the execution till the end of the current function, hotkey
+            Shift+F11. There are some other buttons too that helps trace the
+            execution of our code.</li>
+      </ul>
+      <p>
+        With this available tools one can debug his/her code using the browser.
+      </p>
+    </div>
+    <h2 class="week3-header">Coding Style</h2>
+    <div id="week3-div">
+      <p>
+        To make our code clean and more readable as possible developers need to
+        apply the general coding style. there is a general syntax for that. The
+        following rules should be applied to help make our code readable, and
+        clean.
+      </p>
+      <ul>
+        <li>A space between parameters</li>
+        <li>
+          No space between the function name and parentheses between the
+          parentheses and the parameter
+        </li>
+        <li>Curly brace { on the same line, after a space</li>
+        <li>Indentation 2 spaces</li>
+        <li>A space after for/if/while…</li>
+        <li>An empty line between logical blocks</li>
+        <li>Spaces around a nested call</li>
+        <li>A space between arguments</li>
+        <li>Spaces around operators</li>
+        <li>A semicolon ; is mandatory</li>
+        <li>Lines are not very long</li>
+        <li>} else { without a line break</li>
+      </ul>
+      <p>
+        The below code image clearly implements the coding style listed above
+      </p>
+      <img src="../images/coding_style.png" alt="Good coding style" >
+    </div>
+    <h2 class="week3-header">Error handling, "try...catch"</h2>
+    <div class="week3-div">
+      <p>
+        As developers we sometimes have errors in our script, this causes our
+        code to break down, But there's a syntax construct
+        <em>try...catch</em> that allows us to <em>"catch"</em> errors so the
+        script can, instead of dying, do something more reasonable. in the
+        <em>try { ...</em> block the code is run in that section, the
+        <em>catch (err) {...</em> helps in the case of errors and
+        <em>finally { ...</em> is used in any case after
+        <em>try or catch</em> sometimes there may be no <em>catch</em> section
+        or no <em>finally</em>, so shorter constructs <em>try...catch</em> and
+        <em>try...finally</em> are also valid. The Error objects have the
+        following properties:
+      </p>
+     <ul>
+        <li class="circle">
+            <em>message</em> - the human-readable error message.
+          </li>
+          <li class="circle">
+            <em>name</em> - the string with error name (error constructor name).
+          </li>
+          <li class="circle">
+            <em>stack</em> (non-standard, but well-supported) - the stack at the
+            moment of error creation.
+          </li>
+     </ul>
+      <p>
+        Sometimes an error object is not needed, we omit it by using
+        <b><em>catch {</em></b> instead of <b><em>catch (err) {</em></b
+        >. <br>
+        We can also generate our own errors using the throw operator. <br>
+        There is a global error handler that catches errrors that fall out. In
+        browser it is called <em>window.oneerror</em>. It's one of the easiest
+        ways to log client-side errors and report them to your servers.
+      </p>
+    </div>
+  </body>
+</html>
