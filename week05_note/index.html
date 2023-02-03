@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="Author" content="ThankGod Andrew">
+    <meta
+      name="description"
+      content="Week 5 Reading Note WDD330: Web Frontend Development at Brigham
+      Young University - Idaho">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap">
+    <title>Reading Notes 📘</title>
+  </head>
+  <body>
+    <h1>Preparation: Reading Note</h1>
+    <hr>
+    <div class="note">
+      <h2>3.1 Fetch:</h2>
+      <div class="section">
+        <p>The Fetch API provides an interface for fetching resources.
+          It can be used to fetch any type of resource, including images,
+          videos, and JSON data, and all that without reloading the page.</p>
+        <p><b>The basic syntax of <em>fetch()</em> is:</b></p>
+        <pre>
+  let promise = fetch(url, [options]) <br>
+  url - the URL to access.
+  options - optional parameters: 
+            method, headers etc.
+        </pre>
+        <p>Without options, this is a simple GET request, downloading the
+          contents of the url. Getting a response is usually a two-stage
+          process.</p>
+        <ol>
+          <li>First, the promise, returned by fetch, resolves with an object of
+            the built-in
+            Response class as soon as the server responds with headers. <br>At
+            this stage we
+            can check HTTP status, to see whether it is successful or not, check
+            headers, but
+            don't have the body yet. <br>The promise rejects if the fetch was
+            unable to make HTTP-request,
+            e.g. network problems, or there's no such site. Abnormal
+            HTTP-statuses, such as 404 or 500 do
+            not cause an error.</li>
+          <li>Second, to get the response body, we need to use an additional
+            method call.</li>
+        </ol>
+        <p><b><em>Response</em> provides multiple promise-based methods to
+            access the body in various formats:</b></p>
+        <ul>
+          <li>response.text() - read the response and return as text,</li>
+          <li>response.json() - parse the response as JSON,</li>
+          <li>response.formData() - return the response as FormData object</li>
+          <li>response.blob() - return the response as Blob (binary data with
+            type),</li>
+          <li>response.arrayBuffer() - return the response as ArrayBuffer
+            (low-level representation of binary data),</li>
+          <li>additionally, response.body is a ReadableStream object, it allows
+            you to read the body chunk-by-chunk.</li>
+        </ul>
+        <p>There are also different fetch options which includes: <b>method,
+            headers, and body</b></p>
+        <p>The below button once clicked we get the response body using the <em>response.json()</em>
+          method.</p>
+        <button id="fetchBtn">Fetch JSON Data</button>
+        <div id="jsonData"></div>
+      </div>
+    </div>
+    <div class="note">
+      <h2>3.5 Fetch: Cross-Origin Requests</h2>
+      <div class="section">
+        <p>
+          Fetch is a modern JavaScript API for making HTTP requests.
+          By default, fetch() does not allow for cross-origin requests.
+          This means that a request made from one website to a different
+          website (i.e. a different origin) will be blocked.
+        </p>
+        <p>
+          However, it is possible to perform cross-origin requests with fetch()
+          by using the following two methods:</p>
+          <ol>
+            <li>Setting the "mode" option in the fetch() request to "cors"</li>
+            <li>Providing an "Access-Control-Allow-Origin" header in the
+              response from the server</li>
+          </ol>
+        <p>
+          Example usage of fetch() with "mode" option set to "cors":</p>
+          <pre id="code">
+  fetch('https://example.com', {
+    mode: 'cors'
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Network
+       response was not ok`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(`There was a 
+    problem with the 
+    fetch operation:`, error);
+  });
+        </pre>
+        <p>
+          Note: Cross-origin requests made with fetch() are subject to the
+          same-origin policy, unless the server explicitly allows cross-origin
+          requests by providing the appropriate headers.
+        </p>
+        <p><b>What is Preflight Request?</b></p>
+        <p>A CORS preflight request is a CORS request that checks to see if the
+          CORS protocol is
+          understood and a server is aware using specific methods and headers.
+          It is an OPTIONS
+          request, using three HTTP request headers:
+          Access-Control-Request-Method ,
+          Access-Control-Request-Headers , and the Origin header.</p>
+      </div>
+    </div>
+
+
+    <div class="note">
+      <h2>JavaScript Rest Parameters and Spread Syntax</h2>
+      <div class="section">
+        <p>Rest parameters allow us to represent an indefinite
+          number of arguments as an array.</p>
+        <p>Example:</p>
+        <pre id="rest-example"></pre>
+        <p>Spread syntax allows us to expand elements of an
+          array into individual elements.</p>
+        <p>Example:</p>
+        <pre id="spread-example"></pre>
+        <p>When we see "..." in the code, it is either rest parameters or the
+          spread syntax. <br><br>
+          There's an easy way to distinguish between them:</p>
+        <ul>
+          <li>When ... is at the end of function parameters, it's “rest
+            parameters” and gathers the rest of the list of arguments into an
+            array.</li>
+          <li>When ... occurs in a function call or alike, it's called a “spread
+            syntax” and expands an array into a list.</li>
+        </ul>
+        <p>The Use patterns:</p>
+        <ul>
+          <li>Rest parameters are used to create functions that accept any
+            number of arguments.</li>
+          <li>The spread syntax is used to pass an array to functions that
+            normally require a list of many arguments.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <h2>Single Page Application (SPA)</h2>
+      <div class="section">
+        <p>A single-page application (SPA) is a web application or website that
+          interacts with the user by dynamically rewriting the current web page
+          with new data from the server, instead of loading entire new pages
+          from a server. This gives the user a smooth, fast and seamless
+          experience.</p>
+        <h2>How does it work?</h2>
+        <p>In a traditional web application, the browser sends a request to the
+          server for a new page each time the user navigates to a different
+          page. In a SPA, the browser sends a single initial request to the
+          server to load the HTML, CSS and JavaScript files, and then all
+          subsequent interactions with the server are done using AJAX requests.
+          This means that only the data required for the current page is sent to
+          the browser, instead of the full HTML code for each new page.</p>
+        <p>This allows the SPA to update the current page dynamically, without
+          the need for a full page refresh. This leads to a much faster and
+          smoother user experience, as the browser does not need to reload the
+          entire page every time the user navigates to a new section of the
+          application.</p>
+        <h2>Benefits of Single Page Applications</h2>
+        <ul>
+          <li>Faster and smoother navigation for users</li>
+          <li>Improved user experience</li>
+          <li>Reduced server load</li>
+          <li>Easier to develop and maintain</li>
+        </ul>
+        <p>
+          The dynamic updates are achieved through the use of JavaScript, which
+          makes asynchronous requests to the server for new data. This approach
+          provides a more seamless user experience compared to traditional
+          multi-page web applications, where the entire page must reload to
+          display new content.
+        </p>
+        <button id="toggle">Toggle Details</button>
+        <div id="details" style="display: none;">
+          <p>
+            SPAs can improve the speed and responsiveness of the application by
+            reducing the amount of data that needs to be transferred from the
+            server to the client. They also provide a more native-like
+            experience for the user, since there are no full page reloads.
+          </p>
+          <p>
+            Some popular JavaScript frameworks for building SPAs include React,
+            Angular, and Vue.js. These frameworks provide a set of tools and
+            abstractions for building SPAs, making it easier to manage the state
+            of the application and update the UI in response to user
+            interactions.
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="note">
+        <h2>The Problem with Single Page Apps</h2>
+        <div class="section">
+          <p>Single Page Apps (SPAs) are web applications that load a single
+            HTML page and dynamically update its content as the user interacts
+            with it.</p>
+          <p>However, the problem with SPAs is that they can have poor search
+            engine optimization (SEO) and slow initial load times, because all
+            the necessary resources, such as JavaScript, CSS, and images, are
+            loaded in a single request.</p>
+          <p>To demonstrate the issue with SPAs, here's an example of a
+            slow-loading SPA, the initial loading is visible:</p>
+          <button id="load-spa">Load SPA</button>
+          <pre id="spa-example"></pre>
+        </div>
+      </div>
+      <script src="js/note.js"></script>
+    </body>
+  </html>

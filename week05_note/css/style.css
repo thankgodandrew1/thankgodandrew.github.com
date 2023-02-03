@@ -1,0 +1,61 @@
+body {
+    font-family: Ubuntu, Lato;
+    margin: 0 ;
+    padding: 0;
+    /* background-color: rgb(120, 32, 230); */
+  }
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+    color: #444;
+  }
+  p {
+    margin: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+  }
+  h2 {
+    margin: 40px 20px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+  }
+  ul {
+    margin: 20px;
+    padding-left: 40px;
+    font-size: 18px;  
+    line-height: 1.5;
+    color: #333;
+  }
+  button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+#spread-example{
+    margin: 20px;
+}
+.note{
+    background-color: rgb(255,223,0, .2);
+    box-shadow: 0 0 5px;
+    margin: 20px;
+    padding: 20px;
+}
+.section{
+    background-color: rgb(255,223,0, .1);
+    box-shadow: 0 0 5px;
+    margin: 10px;
+    padding: 20px;
+}
+h1{
+    background: linear-gradient(to right, rgb(255,223,0), rgb(255,223,0, .3));
+    padding: 30px;
+    margin: 5px;
+    box-shadow: 0 0 10px;
+}
