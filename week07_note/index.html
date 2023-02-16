@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap">
+    <title>Reading Notes 📘</title>
+</head>
+<body>
+    <h1 class="h1">Preparation: Reading Note</h1>
+    <hr>
+
+    <div class="container slide-in">
+        <h2 class="header">CSS-Animations</h2>
+		<p>Animations are a great way to add visual interest and interactivity to web pages, and they can be created using CSS without any 
+            JavaScript code. CSS animations can be further enhanced using JavaScript, however, to create more complex and interactive effects.</p>
+		<p>CSS transitions are a simple way to create fluid animations that are triggered when a property value changes. The browser paints
+            the animation, so all that's required is to change the property, and the transition is handled automatically. There are four
+            main properties used to describe CSS transitions: transition-property, transition-duration, transition-timing-function, and 
+            transition-delay. These can be declared together using the shorthand transition property, and can be used to animate multiple
+            properties at once.</p>
+		<button>Learn More</button>
+	</div>
+    <div class="container slide-in-right">
+        <h2 class="header">Variable Scope, Closure</h2>
+        <p>JavaScript is a function-oriented language which means that a function can be created and passed as an argument to another function,
+            and then called from a totally different place of the code later.</p>
+        <p>There are 3 ways to declare a variable in JavaScript: let, const, and var. This article uses let variables in examples.</p>
+        <h3>Code Blocks</h3>
+        <p>If a variable is declared inside a code block, it is only visible inside that block. We can use this to isolate a piece of code 
+           that does its task with variables that only belong to it.</p>
+        <h3>Nested Functions</h3>
+        <p>A function is called "nested" when it is created inside another function. A nested function can be returned either as a property 
+            of a new object or as a result by itself. It can then be used somewhere else. No matter where, it still has access to the same
+            outer variables.</p>
+        <h3>Lexical Environment</h3>
+        <p>Every running function, code block, and the script as a whole have an internal (hidden) associated object known as the Lexical 
+           Environment. The Lexical Environment object consists of two parts: Environment Record and a reference to the outer lexical 
+           environment. A "variable" is just a property of the special internal object, Environment Record. "To get or change a variable" 
+           means "to get or change a property of that object".</p>
+    </div>
+    <div class="container slide-in">
+        <h2>Currying</h2>
+    <p>Currying is an advanced technique used in many programming languages, including JavaScript. It is a transformation of functions that 
+        translates a function from a callable format, such as f(a, b, c), to a format where it is callable as f(a)(b)(c). Currying does not
+         call a function, but rather it transforms it, making it easier to work with and more flexible. The implementation of currying is 
+         straightforward, as it involves creating two wrappers that can be used to pass arguments to a function.</p>
+    <p>One practical use for currying is with logging functions, such as the function log(date, importance, message), which formats and 
+        outputs information. Using currying, this function can be transformed into a partially applied function, allowing for greater 
+        convenience and flexibility when logging. Currying also allows for the creation of other convenience functions, such as for current
+         logs, which can save time and effort in real-world projects.</p>
+    <p>There are many advanced curry implementations that can be used in multi-argument functions. These implementations use if execution
+         branches that either pass a call to the original function or create a partial when there are not enough arguments. However, it is
+          important to note that currying requires a function to have a fixed number of arguments, and functions that use rest parameters cannot
+           be curried in this way.</p>
+    </div>
+    <div class="question">I was wondering, what would happen if JavaScript does not have the closure feature? <br> What limitation would be in JS functions?</div>
+</body>
+</html>
