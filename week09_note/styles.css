@@ -1,0 +1,49 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 40px;
+    padding: 0;
+    background-color: #133337;
+    color: white;
+  }
+
+  h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+  }
+h2{
+    text-align: center;
+    font-family: Ubuntu;
+}
+  p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  pre {
+    background-color: #5f8388;
+    padding: 10px;
+    margin: 15px -24px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+  }
+
+  code {
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #366e75;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: wheat;
+  }
+  canvas {
+    border: 1px solid black;
+    padding: 20px;
+  }

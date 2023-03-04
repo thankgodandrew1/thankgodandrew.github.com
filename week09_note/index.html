@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap">
+    <title>Reading Notes 📘</title>
+</head>
+<body>
+    <h1>Preparation: Reading Note</h1>
+    <hr>
+	<h2>LocalStorage, sessionStorage</h2>
+    <p>This text is about two web storage objects - <code>localStorage</code> and <code>sessionStorage</code> - that allow saving key/value
+         pairs in the browser. The data stored in these objects can survive page refresh (for <code>sessionStorage</code>) and even full browser
+          restarts (for <code>localStorage</code>). The storage capacity of web storage objects is larger than cookies, and modern browsers
+           allow at least 5 MB of data storage.</p>
+    <p><code>localStorage</code> is shared between all tabs and windows with the same origin, while <code>sessionStorage</code> exists only
+         within the current browser tab. Both objects provide methods and properties such as <code>setItem(key, value)</code>, <code>
+            getItem(key)</code>, <code>removeItem(key)</code>, <code>clear()</code>, <code>key(index)</code>, and <code>length</code>.
+             We can use a plain object way of getting/setting keys, but it is not recommended.</p>
+    <p>To loop over keys, we can use a for loop or <code>Object.keys(localStorage)</code> method. Both key and value must be strings, but we
+         can use JSON to store objects. The <code>sessionStorage</code> object is much more limited compared to <code>localStorage</code> as 
+         it only exists within the current browser tab and doesn't survive closing and reopening the tab.</p>
+
+    <p>The code below is an example of using the <code>localStorage</code> and <code>sessionStorage</code> objects in JavaScript. The code 
+        sets a key-value pair in <code>localStorage</code> with the key "name" and the value "John", retrieves the value using <code>
+            getItem()</code>, logs the value to the console, and then removes the key-value pair using <code>removeItem()</code>. Next,
+            it sets a key-value  pair in <code>sessionStorage</code> with the key "age" and the value "30",
+            retrieves the value using <code>getItem()</code>, logs the value to the console, and then clears the <code>sessionStorage</code> 
+            using <code>clear()</code>. This is a simple demonstration of how I learned to use these two web storage objects in JavaScript
+            to store and retrieve data.
+    <pre>
+        // Example of using localStorage
+        localStorage.setItem("name", "John");
+        console.log(localStorage.getItem("name")); // Output: "John"
+        localStorage.removeItem("name");
+        
+        // Example of using sessionStorage
+        sessionStorage.setItem("age", "30");
+        console.log(sessionStorage.getItem("age")); // Output: "30"
+        sessionStorage.clear();
+    </pre>
+
+    <h2>Drawing graphics</h2>
+    <h3>Canvas and WebGL</h3>
+	<p>In summary this article on drawing graphics by MDN introduces the <code>&lt;canvas&gt;</code> element and associated Canvas API, which provide 
+    tools for creating 2D animations, games, data visualizations, and other types of applications, especially when 
+    combined with some of the other APIs the web platform provides. The article also provides resources to help one
+    learn more about drawing graphics on <code>&lt;canvas&gt;</code> elements using JavaScript. Additionally, the 
+    article touches on the basics of using WebGL to create real 3D graphics inside our web browser. Finally, the
+    article provides an active learning exercise that shows how to create and size our own canvas using JavaScript.</p>
+
+    <h3>2D Canvas Basics</h3>
+    <p>This lesson/article on drawing graphics also covers the basics of working with the 2D canvas in HTML5. It covers how to manipulate the
+        CanvasRenderingContext2D object, and provides examples of how to draw shapes, including simple rectangles, strokes and line widths,
+        and paths. The lesson also introduces common canvas methods, such as <code>beginPath()</code>, <code>moveTo()</code>, <code>fill()</code>,
+        and <code>stroke()</code>.</p>
+
+    <h3>Loops and Animations in 2D Canvas</h3>
+    <p>This lesson also teaches loops and animations in 2D canvas. Loops can be used to animate a canvas and can run canvas commands inside a 
+       for loop. The example provided shows how to create a loop that continuously draws a series of triangles that get smaller and rotate each
+       time. Animations in canvas are achieved by running functions repeatedly using <code>window.requestAnimationFrame()</code>. 
+       This function runs a function for each frame, and if that function draws the new update to the animation, the animation loop will
+    continue to run.</p>
+
+    <h3>WebGL Basics</h3>
+    <p>This lesson also covers WebGL basics, which is a 3D canvas content API based on OpenGL that allows developers to communicate directly 
+       with the computer's GPU. Writing raw WebGL is complex, but there are third-party JavaScript libraries such as Three.js, PlayCanvas, 
+       or Babylon.js that handle the WebGL for you, letting you work on a higher level. The lesson demonstrates how to recreate a 3D spinning
+       cube with Three.js by creating a new scene, camera, and renderer, then loading and mapping a texture onto a cube object, and finally 
+       rendering it onto a canvas.</p>
+
+       <h3>Below is a 2D Canvas Basics Example</h3>
+       <canvas id="myCanvas" width="300" height="150"></canvas>
+       <h3>Below is a Loop and Animation Example</h3>
+	   <canvas id="loopCanvas" width="300" height="150"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
