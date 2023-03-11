@@ -1,0 +1,40 @@
+body {
+    font-family: Ubuntu;
+    background-color: #f2f2f2;
+   
+    background-color: rgb(0, 0, 255, .4);
+}
+main{
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    background-color: rgb(0, 0, 255, .1);
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: Lato;
+}
+
+code {
+    background-color: #f3d7d7;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.highlight {
+    background-color: #a7aeee;
+    padding: 2px 5px;
+    border-radius: 4px;
+}

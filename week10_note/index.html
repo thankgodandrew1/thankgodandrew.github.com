@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Lato:wght@400&display=swap">
+    <title>Reading Notes 📘</title>
+</head>
+<body>
+    <header>
+        <h1>Preparation: Reading Note</h1>
+          <hr>
+    </header>
+    <main>
+        <h2>Functions, Execution Contexts, and the Call Stack</h2>
+        <p>Functions are blocks of code that can be defined and invoked multiple times. They can accept parameters as inputs and return a value as output. Functions help in breaking down complex code into smaller, reusable blocks, improving code organization, and reducing duplication.</p>
+
+        <p>Execution contexts refer to the environment in which JavaScript code is executed. It contains information about the code being executed, including variables, functions, and their values. Every time a function is called, a new execution context is created to manage its own set of variables and functions.</p>
+
+        <p>The call stack is a data structure that tracks the current execution context of the program. It keeps track of the order in which functions are called and the current execution context. The call stack operates in a last-in, first-out (LIFO) order, meaning the most recently called function is executed first, and the last function called is executed last.</p>
+
+        <p>Here's an example of a simple function:</p>
+
+        <code>
+            function addNumbers(num1, num2) {
+                return num1 + num2;
+            }
+
+            var result = addNumbers(5, 10);
+            console.log(result); // Output: 15
+        </code>
+
+        <p>In this example, the function <span class="highlight">addNumbers</span> takes two parameters <span class="highlight">num1</span> and <span class="highlight">num2</span>, and returns their sum. The function is then called with arguments 5 and 10, and the result is stored in a variable <span class="highlight">result</span> which is logged to the console.</p>
+
+
+        <h2>Callbacks and Higher-Order Functions in JavaScript</h2>
+        <p>Callbacks and higher-order functions are essential concepts in JavaScript that are used to create more flexible and dynamic code.</p>
+        <p>A callback function is a function that is passed as an argument to another function and is executed when that function completes. Callbacks are often used for asynchronous operations, such as fetching data from an API, where the response may not be immediate.</p>
+        <p>Here's an example code that depicts the use of a callback function:</p>
+        <ul>
+            <li><code>function fetchData(callback) {<br> &nbsp;&nbsp;&nbsp;&nbsp;fetch('https://api.example.com/data')<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(response => response.json())<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(data => callback(data))<br>}</code></li>
+            <li><code>fetchData(data => {<br> &nbsp;&nbsp;&nbsp;&nbsp;console.log(data);<br>});</code></li>
+        </ul>
+        <p>Higher-order functions are functions that take other functions as arguments or return a function as their output. They provide a way to abstract and generalize code, making it more reusable and modular. The speaker gave few examples of higher-order functions include map, filter, and reduce, which are used to manipulate arrays in JavaScript.</p>
+        <p>To understand callbacks and higher-order functions, it's essential to have a solid grasp of JavaScript's functions, closures, and the concept of scope. With these fundamental concepts in place, you can create more powerful and dynamic code that can handle complex logic and asynchronous operations.</p>
+        <p>Overall the teacher ellaborates that callbacks and higher-order functions are essential tools in a JavaScript developer's toolkit. By mastering these concepts, one can write more efficient, modular, and scalable code that can handle a wide range of use cases.</p>
+    </main>
+</body>
+</html>
