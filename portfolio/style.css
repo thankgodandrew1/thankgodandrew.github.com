@@ -48,3 +48,7 @@ main {
 header {
     animation: fade-in 1s ease;
 }
+.bold {
+    font-weight: bold;
+    text-transform: uppercase;
+}
