@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    line-height: 1.5;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+    font-size: 17px;
+    font-family: cursive;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: cadetblue;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+nav ul li {
+    padding: 10px;
+}
+nav ul li a {
+    margin-right: 3em;
+    background-color: aliceblue;
+    padding: 7px;
+    text-decoration: none;
+    box-shadow: 0 0 8px ;
+    transition: background-color 0.5s ease-in;
+}
+nav a:hover {
+    background-color: gold;
+    box-shadow: 0 0 20px khaki;
+    font-weight: bold;
+}
+main section{
+    padding: 20px;
+}
+main p, h2{
+   padding: 10px;
+    text-align: center;
+}
+form {
+    max-width: 900px;
+    margin: auto;
+}
+.fieldset {
+    display: block;
+    padding: 15px;
+    border: 2px solid gold;
+    margin: auto;
+    /* width: 50%; */
+}
+form p {
+    text-align: end;
+    padding: -20em;
+}
+form div {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+form label, input {
+    width: 95%;
+    padding: 10px;
+}
+form input {
+    border: 1px solid khaki;
+    font-size: 14px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+form .textarea {
+    display: block;
+    margin: 0 19px;
+}
+form textarea {
+    padding: 10px;
+    border: 1px solid khaki;
+    font-size: 14px;
+}
+form button {
+    padding: 8px;
+    margin: 10px 0;
+    font-weight: bold;
+    background-color: khaki;
+    border: none;
+    transition: background-color 0.4s ease-in;
+    cursor: pointer;
+    border-radius: 5px;
+}
+form button:hover {
+    background-color: darkgoldenrod;
+    color: whitesmoke;
+}
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+footer {
+    background-color: khaki;
+    margin: 20px auto;
+    padding: 24px;
+    text-align: center;
+}

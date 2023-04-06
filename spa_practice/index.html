@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="styles.css">
+    <title>My Single Page Application</title>
+</head>
+<body>
+    <header>
+        <h1>My Single Page Application</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="page" id="home">
+            <h2>Home</h2>
+            <p>Welcome to my SPA home page, I love SPA's!!</p>
+        </section>
+        <section class="page" id="about">
+            <h2>About</h2>
+            <p>Welcome to my world, I love fun! fun!! fun!!! Do you love fun? Of course you do, SPA fun 😂😂</p>
+        </section>
+        <section class="page" id="contact">
+            <h2>Contact SPA king</h2>
+            <form>
+                <fieldset class="fieldset">
+                    <legend>SPA King</legend>
+                    <P>* Indicates required</P>
+                    <div>
+                        <label>Name<span>*</span><input type="text" name="fname" placeholder="SPA King" required></label>
+                        <label>Email<span>*</span><input type="email" name="email" id="email" placeholder="spaking@gmail.com" required></label>
+                    </div>
+                   <div class="textarea">
+                    <label>Enter Your Message<span>*</span><textarea name="message" cols="90" rows="8" placeholder="Enter Your Message to the SPA King" required></textarea></label>
+                   </div>
+                    <label><button type="submit">Submit</button></label>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+       <div>&copy My SPA Kingship Practice 2023 ! ThankGod Andrew</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
